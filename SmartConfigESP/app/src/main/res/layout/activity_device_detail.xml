@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="top|center"
+
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tvDetailTitle"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:textSize="28dp"
+        android:textColor="#0f5ddb"
+        android:textStyle="bold"
+        android:text="DEVICE:"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/tvDetailDeviceID"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textColor="#000000"
+        android:text="ID: "
+        android:layout_below="@id/tvDetailTitle"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tvConnecttion"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:textColor="#0f5ddb"
+            android:text="Connection: "
+            />
+        <TextView
+            android:id="@+id/tvConnecttionState"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:textColor="#0f5ddb"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="18dp"
+            android:textColor="#0f5ddb"
+            android:text="STATUS: "
+
+            />
+        <TextView
+            android:id="@+id/tvDetailStatus"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="18dp"
+            android:textColor="#0f5ddb"
+            android:text="STATUS: "
+
+            />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDetailStatus">
+
+        <!-- Repeat time -->
+
+        <TextView
+            android:id="@+id/tvDetailRepeatTime"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#0f5ddb"
+            android:text="Repeat Time:"
+
+
+            />
+
+        <EditText
+            android:id="@+id/edtDetailTime"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:digits="0123456789."
+            android:inputType="numberDecimal"
+           />
+
+        <!-- Timer -->
+
+        <TextView
+            android:id="@+id/tvDetailTimer"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#0f5ddb"
+            android:text="Timer:"
+
+            />
+
+        <EditText
+            android:id="@+id/edtDetailTimer"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:digits="0123456789."
+            android:inputType="numberDecimal"
+           />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <Button
+            android:id="@+id/btnDetailSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEND REPEAT" />
+
+    </LinearLayout>
+
+    <!-- History -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:id="@+id/tvDetailHistory"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#0f5ddb"
+            android:text="History"
+            />
+    </LinearLayout>
+
+    <!-- Turn On and off Time -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:textColor="#0f5ddb"
+            android:text="On Time: "
+            />
+        <TextView
+            android:id="@+id/tvDetailTurnOnTime"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:textColor="#0f5ddb"
+            android:text="Off Time: "
+            />
+        <TextView
+            android:id="@+id/tvDetailTurnOffTime"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDetailTurnOn"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="TURN ON"
+            android:layout_marginTop="30dp"
+            />
+        <Button
+            android:id="@+id/btnDetailTurnOff"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:text="TURN OFF"
+
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
