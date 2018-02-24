@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vn.com.tma.gasmontoring.MainActivity">
+
+    <TextView
+        android:id="@+id/tvWeight"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:inputType="numberDecimal"
+        android:numeric="decimal"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_above="@+id/myMap"
+        android:layout_alignStart="@+id/tvCurrent"
+        android:layout_marginStart="21dp" />
+
+    <TextView
+        android:id="@+id/tvCurrent"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:text="Current Weight"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <com.numetriclabz.numandroidcharts.GaugeChart
+        android:id="@+id/gauge_chart"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center_horizontal" />
+
+    <fragment
+        android:id="@+id/myMap"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
